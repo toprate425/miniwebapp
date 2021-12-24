@@ -77,7 +77,6 @@ const RegisterForm = () => {
               required: true,
               autoFocus: true
             }}
-            inputStyle={{ width: '83%' }}
           />
         </Form.Group>
         <div style = {{ marginTop: 20 }}>
@@ -127,6 +126,7 @@ const ComponentWrapper = styled.div`
   margin: 20px 0 0 10px;
   @media only screen and (min-width: 608px) {
     .formWrapper {
+      text-align: start;
       .mb-3 {
         display: inline-block;
         width: 31%;
@@ -182,7 +182,6 @@ const ComponentWrapper = styled.div`
         }
       }
       .phoneWrapper {
-        display: inline-block;
         .fontLabel {
           font-weight: bold;
         }
