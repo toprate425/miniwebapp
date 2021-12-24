@@ -31,7 +31,7 @@ const ComponentContainer = styled.div`
   display: flex;
   align-items: center;
   width: 80%;
-  height: 50px;
+  height: 45px;
   background-color: #000;
   border-bottom: 4px solid #d71921;
   margin: 0 auto;

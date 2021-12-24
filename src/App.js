@@ -84,12 +84,11 @@ const ComponentWrapper = styled.div`
       flex: 1;
       margin-top: 38px;
       .banner-logo {
-        width: 83%;
+        width: 75%;
         height: auto;
       }
     }
     .red-banner-wrapper {
-      position: relative;
       display: flex;
       align-items: center;
       margin-top: 15px;
@@ -103,8 +102,10 @@ const ComponentWrapper = styled.div`
       }
       img {
         position: absolute;
-        right: 0;
-        top: 0;
+        width: 47%;
+        left: 0px;
+        top: 34%;
+        height: 16%;
       }
     }
     .banner-content {

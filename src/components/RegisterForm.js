@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Form } from 'react-bootstrap';
 import Select from 'react-select';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 import Modal from 'react-modal';
-import 'react-phone-number-input/style.css'
-import PhoneInput from 'react-phone-number-input'
 import styled from 'styled-components';
 import ReCaptCha from '../assets/images/recaptcha.png';
 import EnterBg from '../assets/images/enterBg.png';
@@ -20,7 +20,6 @@ const customStyles = {
 };
 
 const RegisterForm = () => {
-  const [value, setValue] = useState();
   const [modalIsOpen, setIsOpen] = useState(false);
 
   const options = [
@@ -72,9 +71,13 @@ const RegisterForm = () => {
         <Form.Group className="phoneWrapper" controlId="formGroupPassword">
           <Form.Label className='fontLabel'>PHONE NUMBER <span>(used to contact winers)</span></Form.Label>
           <PhoneInput
-            placeholder="Enter phone number"
-            value={value}
-            onChange={setValue}
+            country={'ru'}
+            inputProps={{
+              name: 'phone',
+              required: true,
+              autoFocus: true
+            }}
+            inputStyle={{ width: '83%' }}
           />
         </Form.Group>
         <Form.Check type='checkbox' className='checkbox-content'>
@@ -101,7 +104,7 @@ const RegisterForm = () => {
         </Form.Check>
         <Form.Label><span style = {{ color: 'red' }}>*</span>Optional</Form.Label>
         <div className='submit-wrapper'>
-          <img src={ReCaptCha} alt='recaptcha'/>
+          <img src={ReCaptCha} alt='recaptcha' width='40%'/>
           <div className='submit_btn'>ENTER NOW</div>
         </div>
       </Form>
@@ -114,7 +117,8 @@ const ComponentWrapper = styled.div`
   width: 100%;
   background-color: white;
   box-shadow: 5px 10px rgba(0, 0, 0, 0.5);
-  padding: 30px 25px;
+  padding: 10px;
+  z-index: 1;
   flex: 1;
   margin: 20px 0 0 10px;
   .formWrapper {
@@ -137,7 +141,6 @@ const ComponentWrapper = styled.div`
       }
     }
     .checkbox-content {
-      margin-top: 10px;
       input {
         background-color: black;
       }
@@ -154,8 +157,8 @@ const ComponentWrapper = styled.div`
         width: 200px;
         height: 62px;
         position: absolute;
-        right: -106px;
-        top: 32px;
+        right: -89px;
+        top: 17px;
         font-size: 21px;
         color: white;
         padding: 10px;
