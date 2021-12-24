@@ -93,6 +93,8 @@ const ComponentWrapper = styled.div`
       align-items: center;
       margin-top: 15px;
       p {
+        position: absolute;
+        top: 34%; 
         font-size: 29px;
         text-shadow: 2px 2px #000000;
         font-family: 'DINCond-Bold';
@@ -109,9 +111,12 @@ const ComponentWrapper = styled.div`
       }
     }
     .banner-content {
+      position: absolute;
+      top: 48%;
+      margin-left: 45px;
       .banner-title {
         font-family: 'DINCond-Bold';
-        font-size: 29px;
+        font-size: 30px;
       }
       .banner-description {
         margin-top: -10px;
@@ -123,6 +128,7 @@ const ComponentWrapper = styled.div`
           }
           h3 {
             margin: 5px;
+            font-size: 23px;
             font-family: 'DINCond-Bold';
           }
         }
