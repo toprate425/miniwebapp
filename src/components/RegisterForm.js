@@ -116,14 +116,14 @@ const RegisterForm = () => {
 };
 
 const ComponentWrapper = styled.div`
-  display: flex;
-  width: 100%;
-  background-color: white;
-  box-shadow: 5px 10px rgba(0, 0, 0, 0.5);
-  padding: 10px;
+  box-shadow: 5px 4px rgb(0 0 0 / 50%);
   z-index: 0;
+  margin: 10px;
   flex: 1;
-  margin: 20px 0 0 10px;
+  .formWrapper {
+    padding: 20px;
+    background: white;
+  }
   @media only screen and (min-width: 608px) {
     .formWrapper {
       text-align: start;
@@ -199,11 +199,12 @@ const ComponentWrapper = styled.div`
       }
       .submit-wrapper {
         position: relative;
+        justify-content: left;
         .recapchar {
           display: flex;
           flex-direction: column;
           img {
-            width: 45%;
+            width: 75%;
           }
         }
         .submit_btn {
@@ -211,8 +212,8 @@ const ComponentWrapper = styled.div`
           background-repeat: no-repeat;
           height: 62px;
           position: absolute;
-          right: -22px;
-          top: 20px;
+          right: -31px;
+          top: 35px;
           font-size: 21px;
           color: white;
           padding: 10px;

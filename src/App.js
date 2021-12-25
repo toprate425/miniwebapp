@@ -64,7 +64,7 @@ const ComponentWrapper = styled.div`
   background-position: center;
   width: 100%;
   height: 100vh;  
-  @media only screen and (min-width: 608px)  {
+  @media only screen and (min-width: 520px)  {
     .register-main-content {
       width: 100%;
       display: block;
@@ -179,9 +179,9 @@ const ComponentWrapper = styled.div`
       }
       .banner-content {
         position: absolute;
-        top: 28%;
-        margin-left: 45px;
+        top: 30%;
         .banner-title {
+          text-align: start;
           font-family: 'DINCond-Bold';
           font-size: 30px;
         }
